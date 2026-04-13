@@ -1,60 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adam Szilagyi - Portfolio</title>
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f0f0f;
+        color: white;
+    }
+
+    /* HEADER */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: #1a1a1a;
+        position: sticky;
+        top: 0;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-buttons a {
+        margin-left: 10px;
+        padding: 10px 14px;
+        background: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+
+    .nav-buttons a:hover {
+        background: #555;
+    }
+
+    /* ABOUT */
+    .about {
+        display: flex;
+        gap: 20px;
+        padding: 40px;
+        align-items: center;
+    }
+
+    .about img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .cert {
+        width: 120px;
+        margin-top: 10px;
+    }
+
+    .socials a {
+        margin-right: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* SECTIONS */
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+        border-top: 1px solid #222;
+    }
+
+    .row img {
+        width: 300px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .row .desc {
+        max-width: 400px;
+        padding: 0 20px;
+    }
+
+    .row button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        background: #444;
+        color: white;
+        cursor: pointer;
+    }
+
+    .row button:hover {
+        background: #666;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding: 40px;
+        border-top: 1px solid #222;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    input, textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button.submit {
+        background: #444;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        background: #1a1a1a;
+        font-size: 12px;
+    }
+</style>
 </head>
+
 <body>
-¬ø
-<main class="portfolio">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <img class="profile-img" src="https://adamsz4766-doycq.wordpress.com/wp-content/uploads/2026/03/img_9719.jpeg" />
+<header>
+    <div class="title">Adam Szilagyi - Portfolio</div>
+    <div class="nav-buttons">
+        <a href="#">Informational</a>
+        <a href="#">Freeform</a>
+        <a href="#">News Package</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+    </div>
+</header>
 
-      <div class="hero-text">
-        <h1>Your Name</h1>
-        <h2>Student • Developer • Creator</h2>
+<!-- ABOUT -->
+<section class="about">
+    <img src="headshot.jpg" alt="Headshot">
 
+    <div>
+        <h2>About Me</h2>
         <p>
-          This is your about me section. Replace this with real info.
+            Write your about me text here. This is where you describe yourself,
+            your skills, and your background in media production.
         </p>
 
-        <a class="btn no-underline" href="#">
-          View Resume
-        </a>
-      </div>
+        <img class="cert" src="premiere-cert.png" alt="Premiere Pro Cert">
+
+        <div class="socials">
+            <a href="#">YT</a>
+            <a href="#">IG</a>
+            <a href="#">LI</a>
+            <a href="#">TW</a>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- PROJECTS -->
-  <section class="projects">
-
-    <div class="card">
-      <h3>Tab #1</h3>
-      <p>Description of your project.</p>
-      <a href="#" class="card-btn no-underline">View Project</a>
+<!-- ROW 1 -->
+<section class="row">
+    <img id="img1" src="info1.jpg">
+    <div class="desc">
+        <h3>Informational</h3>
+        <button onclick="location.href='informational.html'">View Page</button>
+        <p>Description of your informational videos goes here.</p>
     </div>
+</section>
 
-    <div class="card">
-      <h3>Tab #2</h3>
-      <p>Description of your project.</p>
-      <a href="#" class="card-btn no-underline">View Project</a>
+<!-- ROW 2 -->
+<section class="row">
+    <img id="img2" src="freeform1.jpg">
+    <div class="desc">
+        <h3>Freeform</h3>
+        <button onclick="location.href='freeform.html'">View Page</button>
+        <p>Description of your freeform videos goes here.</p>
     </div>
+</section>
 
-    <div class="card">
-      <h3>Tab #3</h3>
-      <p>Description of your project.</p>
-      <a href="#" class="card-btn no-underline">View Project</a>
+<!-- ROW 3 -->
+<section class="row">
+    <img id="img3" src="news1.jpg">
+    <div class="desc">
+        <h3>News Packages</h3>
+        <button onclick="location.href='news.html'">View Page</button>
+        <p>Description of your news packages goes here.</p>
     </div>
+</section>
 
-  </section>
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Contact Me</h2>
 
-</main>
+    <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Message..." rows="5"></textarea>
+        <button class="submit" type="submit">Send</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div>Adam Szilagyi - Portfolio</div>
+    <div>
+        <a href="#">YT</a> |
+        <a href="#">IG</a> |
+        <a href="#">LI</a>
+    </div>
+</footer>
+
+<script>
+    // Image cycling sets
+    const infoImgs = ["info1.jpg", "info2.jpg", "info3.jpg", "info4.jpg"];
+    const freeImgs = ["free1.jpg", "free2.jpg", "free3.jpg"];
+    const newsImgs = ["news1.jpg", "news2.jpg", "news3.jpg"];
+
+    let i1 = 0, i2 = 0, i3 = 0;
+
+    setInterval(() => {
+        i1 = (i1 + 1) % infoImgs.length;
+        document.getElementById("img1").src = infoImgs[i1];
+
+        i2 = (i2 + 1) % freeImgs.length;
+        document.getElementById("img2").src = freeImgs[i2];
+
+        i3 = (i3 + 1) % newsImgs.length;
+        document.getElementById("img3").src = newsImgs[i3];
+    }, 2500);
+</script>
 
 </body>
 </html>
