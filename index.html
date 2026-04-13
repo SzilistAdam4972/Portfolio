@@ -5,147 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Adam Szilagyi - Portfolio</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f0f0f;
-        color: white;
-    }
-
-    /* HEADER */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        background: #1a1a1a;
-        position: sticky;
-        top: 0;
-    }
-
-    .title {
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .nav-buttons a {
-        margin-left: 10px;
-        padding: 10px 14px;
-        background: #333;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        transition: 0.2s;
-    }
-
-    .nav-buttons a:hover {
-        background: #555;
-    }
-
-    /* ABOUT */
-    .about {
-        display: flex;
-        gap: 20px;
-        padding: 40px;
-        align-items: center;
-    }
-
-    .about img {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .cert {
-        width: 120px;
-        margin-top: 10px;
-    }
-
-    .socials a {
-        margin-right: 10px;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    /* SECTIONS */
-    .row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 40px;
-        border-top: 1px solid #222;
-    }
-
-    .row img {
-        width: 300px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .row .desc {
-        max-width: 400px;
-        padding: 0 20px;
-    }
-
-    .row button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 6px;
-        background: #444;
-        color: white;
-        cursor: pointer;
-    }
-
-    .row button:hover {
-        background: #666;
-    }
-
-    /* CONTACT */
-    .contact {
-        padding: 40px;
-        border-top: 1px solid #222;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-    }
-
-    input, textarea {
-        margin-bottom: 10px;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-    }
-
-    button.submit {
-        background: #444;
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* FOOTER */
-    footer {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 40px;
-        background: #1a1a1a;
-        font-size: 12px;
-    }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
     <div class="title">Adam Szilagyi - Portfolio</div>
+
     <div class="nav-buttons">
         <a href="#">Informational</a>
         <a href="#">Freeform</a>
@@ -179,6 +46,7 @@
 <!-- ROW 1 -->
 <section class="row">
     <img id="img1" src="info1.jpg">
+
     <div class="desc">
         <h3>Informational</h3>
         <button onclick="location.href='informational.html'">View Page</button>
@@ -189,6 +57,7 @@
 <!-- ROW 2 -->
 <section class="row">
     <img id="img2" src="freeform1.jpg">
+
     <div class="desc">
         <h3>Freeform</h3>
         <button onclick="location.href='freeform.html'">View Page</button>
@@ -199,6 +68,7 @@
 <!-- ROW 3 -->
 <section class="row">
     <img id="img3" src="news1.jpg">
+
     <div class="desc">
         <h3>News Packages</h3>
         <button onclick="location.href='news.html'">View Page</button>
@@ -221,6 +91,7 @@
 <!-- FOOTER -->
 <footer>
     <div>Adam Szilagyi - Portfolio</div>
+
     <div>
         <a href="#">YT</a> |
         <a href="#">IG</a> |
@@ -229,7 +100,6 @@
 </footer>
 
 <script>
-    // Image cycling sets
     const infoImgs = ["info1.jpg", "info2.jpg", "info3.jpg", "info4.jpg"];
     const freeImgs = ["free1.jpg", "free2.jpg", "free3.jpg"];
     const newsImgs = ["news1.jpg", "news2.jpg", "news3.jpg"];
