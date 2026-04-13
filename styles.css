@@ -123,6 +123,46 @@ button.submit {
     cursor: pointer;
 }
 
+/* ===== FADE-IN SCROLL ANIMATION ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+    padding: 40px;
+    border-top: 1px solid #222;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.bar {
+    width: 100%;
+    background: #222;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #555;
+}
+
 /* FOOTER */
 footer {
     display: flex;
