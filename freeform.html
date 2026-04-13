@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Freeform - Adam Szilagyi</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.page-title {
+    padding: 40px 40px 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.page-desc {
+    padding: 0 40px 40px;
+    color: #aaa;
+}
+
+/* VIDEO ROWS */
+.video-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 40px;
+    border-top: 1px solid #222;
+}
+
+/* LEFT SIDE VIDEO CARD */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+}
+
+.video-title {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* HOVER ZOOM */
+.video-card img {
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.video-card img:hover {
+    transform: scale(1.08);
+}
+
+/* TEXT */
+.video-text {
+    max-width: 500px;
+    color: #ccc;
+}
+
+/* CONTACT (same styling as main site if already in styles.css) */
+.contact {
+    padding: 40px;
+    border-top: 1px solid #222;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.submit {
+    background: #444;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button.submit:hover {
+    background: #666;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="title">Adam Szilagyi - Portfolio</div>
+
+    <div class="nav-buttons">
+        <a href="index.html">Home</a>
+        <a href="informational.html">Informational</a>
+        <a href="freeform.html">Freeform</a>
+        <a href="news.html">News Package</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+    </div>
+</header>
+
+<!-- TITLE -->
+<div class="page-title">Freeform</div>
+<div class="page-desc">Will add later</div>
+
+<!-- ROW 1 -->
+<section class="video-row">
+    <a class="video-card" href="https://your-link-1.com" target="_blank">
+        <div class="video-title">Vid #1</div>
+        <img src="images/info1.jpg" alt="Vid 1">
+    </a>
+    <div class="video-text">Description of video #1 goes here.</div>
+</section>
+
+<!-- ROW 2 -->
+<section class="video-row">
+    <a class="video-card" href="https://your-link-2.com" target="_blank">
+        <div class="video-title">Vid #2</div>
+        <img src="images/info2.jpg" alt="Vid 2">
+    </a>
+    <div class="video-text">Description of video #2 goes here.</div>
+</section>
+
+<!-- ROW 3 -->
+<section class="video-row">
+    <a class="video-card" href="https://your-link-3.com" target="_blank">
+        <div class="video-title">Vid #3</div>
+        <img src="images/info3.jpg" alt="Vid 3">
+    </a>
+    <div class="video-text">Description of video #3 goes here.</div>
+</section>
+
+<!-- ROW 4 -->
+<section class="video-row">
+    <a class="video-card" href="https://your-link-4.com" target="_blank">
+        <div class="video-title">Vid #4</div>
+        <img src="images/info4.jpg" alt="Vid 4">
+    </a>
+    <div class="video-text">Description of video #4 goes here.</div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/mwvaejre" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Message..." rows="5"></textarea>
+        <button class="submit" type="submit">Send</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div>Adam Szilagyi - Portfolio</div>
+
+    <div>
+        <a href="#">YT</a> |
+        <a href="#">IG</a> |
+        <a href="#">LI</a>
+    </div>
+</footer>
+
+</body>
+</html>
