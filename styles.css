@@ -44,15 +44,16 @@ header {
 }
 
 .about img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .cert {
-    width: 80px;
-    margin-top: 10px;
+    width: 90px;
+    margin-top: 12px;
+    opacity: 0.9;
 }
 
 .socials a {
@@ -137,7 +138,10 @@ button.submit {
 
 /* ===== SKILLS SECTION ===== */
 .skills {
-    padding: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
     border-top: 1px solid #222;
 }
 
