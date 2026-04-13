@@ -43,17 +43,19 @@ header {
     align-items: center;
 }
 
-.about img {
+/* HEADSHOT */
+.headshot {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
 }
 
+/* CERT BADGE */
 .cert {
-    width: 90px;
-    margin-top: 12px;
-    opacity: 0.9;
+    width: 80px;
+    height: auto;
+    margin-top: 10px;
 }
 
 .socials a {
