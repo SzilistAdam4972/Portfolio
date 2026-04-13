@@ -10,29 +10,31 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="title">Adam Szilagyi - Portfolio</div>
 
     <div class="nav-buttons">
-        <a href="#">Informational</a>
-        <a href="#">Freeform</a>
-        <a href="#">News Package</a>
+        <a href="index.html">Home</a>
+        <a href="informational.html">Informational</a>
+        <a href="freeform.html">Freeform</a>
+        <a href="news.html">News Package</a>
         <a href="cv.pdf" target="_blank">CV</a>
     </div>
 </header>
 
 <!-- ABOUT -->
 <section class="about">
-    <img src="headshot.jpg" alt="Headshot">
+    <img src="images/headshot.jpg" alt="Headshot">
 
     <div>
         <h2>About Me</h2>
         <p>
-            Write your about me text here. This is where you describe yourself,
-            your skills, and your background in media production.
+            Write your about me text here. This is where you describe your skills,
+            experience, and interests in media production.
         </p>
 
-        <img class="cert" src="premiere-cert.png" alt="Premiere Pro Cert">
+        <img class="cert" src="images/premiere-cert.png" alt="Premiere Pro Certificate">
 
         <div class="socials">
             <a href="#">YT</a>
@@ -45,34 +47,34 @@
 
 <!-- ROW 1 -->
 <section class="row">
-    <img id="img1" src="info1.jpg">
+    <img id="img1" src="images/info1.jpg" alt="Informational preview">
 
     <div class="desc">
         <h3>Informational</h3>
         <button onclick="location.href='informational.html'">View Page</button>
-        <p>Description of your informational videos goes here.</p>
+        <p>Informational video projects and storytelling-based pieces.</p>
     </div>
 </section>
 
 <!-- ROW 2 -->
 <section class="row">
-    <img id="img2" src="freeform1.jpg">
+    <img id="img2" src="images/free1.jpg" alt="Freeform preview">
 
     <div class="desc">
         <h3>Freeform</h3>
         <button onclick="location.href='freeform.html'">View Page</button>
-        <p>Description of your freeform videos goes here.</p>
+        <p>Creative, experimental, and style-driven video work.</p>
     </div>
 </section>
 
 <!-- ROW 3 -->
 <section class="row">
-    <img id="img3" src="news1.jpg">
+    <img id="img3" src="images/news1.jpg" alt="News preview">
 
     <div class="desc">
         <h3>News Packages</h3>
         <button onclick="location.href='news.html'">View Page</button>
-        <p>Description of your news packages goes here.</p>
+        <p>Journalistic video packages and broadcast-style reporting.</p>
     </div>
 </section>
 
@@ -85,7 +87,6 @@
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Message..." rows="5"></textarea>
         <button class="submit" type="submit">Send</button>
-</form>
     </form>
 </section>
 
@@ -100,10 +101,26 @@
     </div>
 </footer>
 
+<!-- SLIDESHOW SCRIPT -->
 <script>
-    const infoImgs = ["info1.jpg", "info2.jpg", "info3.jpg", "info4.jpg"];
-    const freeImgs = ["free1.jpg", "free2.jpg", "free3.jpg"];
-    const newsImgs = ["news1.jpg", "news2.jpg", "news3.jpg"];
+    const infoImgs = [
+        "images/info1.jpg",
+        "images/info2.jpg",
+        "images/info3.jpg",
+        "images/info4.jpg"
+    ];
+
+    const freeImgs = [
+        "images/free1.jpg",
+        "images/free2.jpg",
+        "images/free3.jpg"
+    ];
+
+    const newsImgs = [
+        "images/news1.jpg",
+        "images/news2.jpg",
+        "images/news3.jpg"
+    ];
 
     let i1 = 0, i2 = 0, i3 = 0;
 
