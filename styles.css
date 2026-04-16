@@ -425,8 +425,8 @@ footer a:hover {
   text-decoration: none;
   color: white;
   transition: transform 0.2s ease;
-  min-width: 360px;
-  width: 360px;
+  min-width: 320px;
+  width: 320px;
 }
 
 .video-card:hover img {
@@ -462,7 +462,7 @@ footer a:hover {
   display: flex;
   gap: 8px;
   margin-top: 12px;
-  flex-wrap: wrap;
+  
 }
 
 .tag {
