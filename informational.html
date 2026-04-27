@@ -11,30 +11,31 @@
     <!-- HEADER -->
     <header>
       <a href="index.html" class="title">Adam Szilagyi - Portfolio</a>
-      <div class="nav-buttons">
+      <nav class="nav-buttons" aria-label="Primary navigation">
         <a href="informational.html">Informational</a>
         <a href="freeform.html">Freeform</a>
         <a href="news.html">News Package</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-      </div>
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
     </header>
 
-    <!-- PAGE TITLE -->
-    <div class="page-title">Informational</div>
-    <div class="page-desc">
-      Informational video projects and storytelling-based pieces.
-    </div>
+    <main id="main-content">
+      <!-- PAGE TITLE -->
+      <h1 class="page-title">Informational</h1>
+      <p class="page-desc">
+        Informational video projects and storytelling-based pieces.
+      </p>
 
-    <!-- VIDEO 1 -->
-    <section class="video-row">
-      <a class="video-card" href="https://youtu.be/GxBQEEWye48" target="_blank">
+      <!-- VIDEO 1 -->
+      <section class="video-row">
+        <a class="video-card" href="https://youtu.be/GxBQEEWye48" target="_blank" rel="noopener noreferrer">
         <div class="video-title">Jacksonville Zoo - Malayan Tiger Video</div>
-        <img src="images/info1.jpg" alt="Video 1 thumbnail" />
+        <img src="images/thumbs/info1.jpg" alt="Jacksonville Zoo Malayan Tiger video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
         <div class="video-text">
-          This video was created for the Jacksonvile Zoo Video Competition.
-          Myself and a small group had the chance to film Malayan Tigers
+          This video was created for the Jacksonville Zoo Video Competition.
+          A small group and I had the chance to film Malayan Tigers
           on-location and interview their caretakers face-to-face. It was a
           wonderful opportunity to experience the more professional side of
           video production, creating a video for a client. This video was played
@@ -53,16 +54,16 @@
 
     <!-- VIDEO 2 -->
     <section class="video-row">
-      <a class="video-card" href="https://youtu.be/wInIKZqUEM0" target="_blank">
+      <a class="video-card" href="https://youtu.be/wInIKZqUEM0" target="_blank" rel="noopener noreferrer">
         <div class="video-title">COVID Documentary - The COVID Chronicle</div>
-        <img src="images/info2.jpg" alt="Video 2 thumbnail" />
+        <img src="images/thumbs/info2.jpg" alt="COVID Documentary The COVID Chronicle thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
         <div class="video-text">
           This 10 minute documentary was created for the UNF Scholastic
           Video/Film Contest. We discussed the impact of COVID on the school
           system and learning throughout the pandemic, both during and after the
-          COVID pandemic. Additonally we interviewed several students and
+          COVID pandemic. Additionally, we interviewed several students and
           teachers about their experiences and thoughts on COVID's impact.
         </div>
         <div class="video-tags">
@@ -80,16 +81,17 @@
         class="video-card"
         href="https://vimeo.com/1041259561?share=copy&fl=sv&fe=ci#t=613"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div class="video-title">CHS Digital Media Academy Video-Strand</div>
-        <img src="images/info3.jpg" alt="Video 3 thumbnail" />
+        <img src="images/thumbs/info3.jpg" alt="CHS Digital Media Academy video strand thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
         <div class="video-text">
           This Video-Strand was made as a replacement for the out-of-date CHS
           Academy video for the Digital Media Academy. We conducted several
-          interviews where Academy Ambassedors discussed the benefits and
-          opportunites students would recieve and experience should they join
+          interviews where Academy Ambassadors discussed the benefits and
+          opportunities students would receive and experience should they join
           the academy, including several certifications (Adobe After Effects,
           Photoshop, Etc.). This Video-Strand was published to the
           <a href="https://www-chs.stjohns.k12.fl.us/academies/"
@@ -112,20 +114,21 @@
         class="video-card"
         href="https://vimeo.com/1041259561?share=copy&fl=sv&fe=ci#t=463"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div class="video-title">
           CHS Financial Technology Academy Video-Strand
         </div>
-        <img src="images/info4.jpg" alt="Video 4 thumbnail" />
+        <img src="images/thumbs/info4.jpg" alt="CHS Financial Technology Academy video strand thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
         <div class="video-text">
           This Video-Strand was made as a replacement for the out-of-date CHS
           Academy video for the Financial Technology Academy. We conducted
-          several interviews where Academy Ambassedors discussed the benefits
-          and opportunites students would recieve and experience should they
+          several interviews where Academy Ambassadors discussed the benefits
+          and opportunities students would receive and experience should they
           join the academy, including several certifications (Intuit
-          Bookkeeping, ESB Entrepreurship, Etc.). This Video-Strand was
+          Bookkeeping, ESB Entrepreneurship, Etc.). This Video-Strand was
           published to the
           <a href="https://www-chs.stjohns.k12.fl.us/academies/"
             ><b>Creekside Academy Webpage</b></a
@@ -142,23 +145,27 @@
     </section>
 
     <!-- CONTACT FORM -->
-    <section class="contact">
-      <h2>Contact Me</h2>
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
       <form action="https://formspree.io/f/mwvaejre" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Message..." rows="5"></textarea>
+        <label for="contact-name">Your Name</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" required />
+        <label for="contact-email">Your Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" required />
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5"></textarea>
         <button class="submit" type="submit">Send</button>
       </form>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
       <div>Adam Szilagyi - Portfolio</div>
       <div>
-        <a href="https://www.youtube.com/">YT</a> |
-        <a href="https://www.instagram.com">IG</a> |
-        <a href="https://www.linkedin.com/">LI</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YT</a> |
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">IG</a> |
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LI</a>
       </div>
     </footer>
   </body>

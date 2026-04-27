@@ -13,135 +13,185 @@
     <header>
       <a href="index.html" class="title">Adam Szilagyi - Portfolio</a>
 
-      <div class="nav-buttons">
+      <nav class="nav-buttons" aria-label="Primary navigation">
         <a href="informational.html">Informational</a>
         <a href="freeform.html">Freeform</a>
         <a href="news.html">News Package</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-      </div>
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
     </header>
 
-    <!-- ABOUT -->
-    <section class="about fade-in">
-      <img class="headshot" src="images/headshot.jpg" alt="Headshot" />
+    <main id="main-content">
+      <h1 class="visually-hidden">Adam Szilagyi Video Production Portfolio</h1>
 
-      <div>
-        <h2>About Me</h2>
-        <p>
-          Hello, I am Adam Szilagyi, a Freshman at the University of North
-          Florida pursuing a Degree in Nursing. Video-Production is one of my
-          hobbies and I'm glad to have had the opportunity to learn the
-          video-production process in the CHS TV Production Class and Academy.
-        </p>
+      <!-- ABOUT -->
+      <section class="about fade-in">
+        <img
+          class="headshot"
+          src="images/headshot.jpg"
+          alt="Adam Szilagyi headshot"
+          width="320"
+          height="412"
+          decoding="async"
+        />
 
-        <img class="cert" src="images/premiere-cert.png" alt="Cert1" />
-        <!-- <img class="cert" src="images/after-effects-cert.png" alt="Cert2" /> -->
+        <div>
+          <h2>About Me</h2>
+          <p>
+            Hello, I am Adam Szilagyi, a freshman at the University of North
+            Florida pursuing a degree in Nursing. Video production is one of my
+            hobbies and I'm glad to have had the opportunity to learn the
+            video production process in the CHS TV Production Class and Academy.
+          </p>
 
-        <div class="socials">
-          <a href="https://www.youtube.com/">YT</a>
-          <a href="https://www.instagram.com">IG</a>
-          <a href="https://www.linkedin.com/">LI</a>
+          <img
+            class="cert"
+            src="images/premiere-cert.png"
+            alt="Adobe Premiere Pro certification badge"
+            width="601"
+            height="601"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- <img class="cert" src="images/after-effects-cert.png" alt="Cert2" /> -->
+
+          <div class="socials" aria-label="Social links">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YT</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">IG</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LI</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section class="skills fade-in">
-      <h2>Skills</h2>
+      <!-- SKILLS -->
+      <section class="skills fade-in" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
 
-      <div class="skill">
-        <div class="skill-name">Premiere Pro (9/10)</div>
-        <div class="bar"><div class="bar-fill" style="width: 90%"></div></div>
-      </div>
+        <div class="skill">
+          <div class="skill-name">Premiere Pro (9/10)</div>
+          <div class="bar" role="progressbar" aria-label="Premiere Pro skill level" aria-valuemin="0" aria-valuemax="10" aria-valuenow="9">
+            <div class="bar-fill" style="width: 90%"></div>
+          </div>
+        </div>
 
-      <div class="skill">
-        <div class="skill-name">After Effects (7/10)</div>
-        <div class="bar"><div class="bar-fill" style="width: 70%"></div></div>
-      </div>
+        <div class="skill">
+          <div class="skill-name">After Effects (7/10)</div>
+          <div class="bar" role="progressbar" aria-label="After Effects skill level" aria-valuemin="0" aria-valuemax="10" aria-valuenow="7">
+            <div class="bar-fill" style="width: 70%"></div>
+          </div>
+        </div>
 
-      <div class="skill">
-        <div class="skill-name">Camera Work (8/10)</div>
-        <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
-      </div>
-    </section>
+        <div class="skill">
+          <div class="skill-name">Camera Work (8/10)</div>
+          <div class="bar" role="progressbar" aria-label="Camera Work skill level" aria-valuemin="0" aria-valuemax="10" aria-valuenow="8">
+            <div class="bar-fill" style="width: 80%"></div>
+          </div>
+        </div>
+      </section>
 
-    <!-- ROW 1 -->
-    <section class="row fade-in">
-      <img id="img1" src="images/info1.jpg" alt="Informational preview" />
+      <!-- ROW 1 -->
+      <section class="row fade-in">
+        <img
+          id="img1"
+          src="images/thumbs/info1.jpg"
+          alt="Preview image for informational video projects"
+          width="720"
+          height="405"
+          loading="lazy"
+          decoding="async"
+        />
 
-      <div class="desc">
-        <h3>Informational</h3>
-        <p>Informational video projects and storytelling-based pieces.</p>
-        <button onclick="location.href = 'informational.html'">
-          View Page
-        </button>
-      </div>
-    </section>
+        <div class="desc">
+          <h2>Informational</h2>
+          <p>Informational video projects and storytelling-based pieces.</p>
+          <a class="button-link" href="informational.html">View Page</a>
+        </div>
+      </section>
 
-    <!-- ROW 2 -->
-    <section class="row fade-in">
-      <img id="img2" src="images/free1.jpg" alt="Freeform preview" />
+      <!-- ROW 2 -->
+      <section class="row fade-in">
+        <img
+          id="img2"
+          src="images/thumbs/free1.jpg"
+          alt="Preview image for freeform video projects"
+          width="720"
+          height="405"
+          loading="lazy"
+          decoding="async"
+        />
 
-      <div class="desc">
-        <h3>Freeform</h3>
-        <p>Creative, experimental, and style-driven video work.</p>
-        <button onclick="location.href = 'freeform.html'">View Page</button>
-      </div>
-    </section>
+        <div class="desc">
+          <h2>Freeform</h2>
+          <p>Creative, experimental, and style-driven video work.</p>
+          <a class="button-link" href="freeform.html">View Page</a>
+        </div>
+      </section>
 
-    <!-- ROW 3 -->
-    <section class="row fade-in">
-      <img id="img3" src="images/news1.jpg" alt="News preview" />
+      <!-- ROW 3 -->
+      <section class="row fade-in">
+        <img
+          id="img3"
+          src="images/thumbs/news1.jpg"
+          alt="Preview image for news package video projects"
+          width="720"
+          height="405"
+          loading="lazy"
+          decoding="async"
+        />
 
-      <div class="desc">
-        <h3>News Packages</h3>
-        <p>News-style video packages and broadcast-style reporting.</p>
-        <button onclick="location.href = 'news.html'">View Page</button>
-      </div>
-    </section>
+        <div class="desc">
+          <h2>News Packages</h2>
+          <p>News-style video packages and broadcast-style reporting.</p>
+          <a class="button-link" href="news.html">View Page</a>
+        </div>
+      </section>
 
-    <!-- CONTACT -->
-    <section class="contact fade-in">
-      <h2>Contact Me</h2>
+      <!-- CONTACT -->
+      <section class="contact fade-in" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
 
-      <form action="https://formspree.io/f/mwvaejre" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Message..." rows="5"></textarea>
-        <button class="submit" type="submit">Send</button>
-      </form>
-    </section>
+        <form action="https://formspree.io/f/mwvaejre" method="POST">
+          <label for="contact-name">Your Name</label>
+          <input id="contact-name" type="text" name="name" autocomplete="name" required />
+          <label for="contact-email">Your Email</label>
+          <input id="contact-email" type="email" name="email" autocomplete="email" required />
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="5"></textarea>
+          <button class="submit" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
       <div>Adam Szilagyi - Portfolio</div>
 
       <div>
-        <a href="https://www.youtube.com/">YT</a> |
-        <a href="https://www.instagram.com">IG</a> |
-        <a href="https://www.linkedin.com/">LI</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YT</a> |
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">IG</a> |
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LI</a>
       </div>
     </footer>
 
     <!-- SLIDESHOW SCRIPT -->
     <script>
       const infoImgs = [
-        "images/info1.jpg",
-        "images/info2.jpg",
-        "images/info3.jpg",
-        "images/info4.jpg",
+        "images/thumbs/info1.jpg",
+        "images/thumbs/info2.jpg",
+        "images/thumbs/info3.jpg",
+        "images/thumbs/info4.jpg",
       ];
 
       const freeImgs = [
-        "images/free1.jpg",
-        "images/free2.jpg",
-        "images/free3.jpg",
+        "images/thumbs/free1.jpg",
+        "images/thumbs/free2.jpg",
+        "images/thumbs/free3.jpg",
       ];
 
       const newsImgs = [
-        "images/news1.jpg",
-        "images/news2.jpg",
-        "images/news3.jpg",
+        "images/thumbs/news1.jpg",
+        "images/thumbs/news2.jpg",
+        "images/thumbs/news3.jpg",
       ];
 
       let i1 = 0,

@@ -8,6 +8,33 @@ body {
   color: white;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 3px;
+}
+
 /* ========================================
    HEADER
    ======================================== */
@@ -38,14 +65,28 @@ header {
   opacity: 0.8;
 }
 
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 .nav-buttons a {
-  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   padding: 10px 14px;
   background: rgba(255, 255, 255, 0.06);
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  transition: all 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -120,11 +161,16 @@ header {
 }
 
 .socials a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   margin-right: 12px;
   font-size: 18px;
   color: #ccc;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .socials a:hover {
@@ -143,7 +189,7 @@ header {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   max-width: 1100px;
   margin: auto;
-  gap: 200px;
+  gap: clamp(40px, 10vw, 120px);
 }
 
 .row img {
@@ -166,7 +212,7 @@ header {
   flex-direction: column;
 }
 
-.desc h3 {
+.desc h2 {
   font-size: 22px;
   margin: 0 0 10px 0;
   min-height: 55px;
@@ -218,7 +264,12 @@ header {
 /* ========================================
    BUTTONS
    ======================================== */
-button {
+button,
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   margin-top: 10px;
   padding: 10px 16px;
   border: none;
@@ -226,10 +277,15 @@ button {
   background: linear-gradient(135deg, #444, #222);
   color: white;
   cursor: pointer;
-  transition: all 0.25s ease;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-button:hover {
+button:hover,
+.button-link:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #666, #333);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -251,6 +307,12 @@ form {
   gap: 12px;
 }
 
+label {
+  color: #cfcfcf;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
 input,
 textarea {
   padding: 12px;
@@ -258,7 +320,6 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   color: white;
-  outline: none;
   font-family: Arial, sans-serif;
 }
 
@@ -285,6 +346,9 @@ footer {
 }
 
 footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: #aaa;
   margin-left: 10px;
   text-decoration: none;
@@ -300,12 +364,14 @@ footer a:hover {
    ======================================== */
 .page-title {
   padding: 40px 40px 10px;
+  margin: 0;
   font-size: 32px;
   font-weight: bold;
 }
 
 .page-desc {
   padding: 0 40px 40px;
+  margin: 0;
   color: #aaa;
 }
 
@@ -401,12 +467,21 @@ footer a:hover {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .row {
+    padding: 60px 40px;
+    gap: 40px;
+  }
 }
 
 /* ========================================
@@ -425,7 +500,6 @@ footer a:hover {
   }
 
   .nav-buttons a {
-    margin-left: 5px;
     padding: 8px 10px;
     font-size: 12px;
   }
@@ -479,7 +553,7 @@ footer a:hover {
     text-align: center;
   }
 
-  .desc h3 {
+  .desc h2 {
     min-height: auto;
     font-size: 18px;
     justify-content: center;
@@ -564,8 +638,35 @@ footer a:hover {
   }
 
   /* Buttons */
-  button {
+  button,
+  .button-link {
     padding: 8px 12px;
     font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .title:hover,
+  .nav-buttons a:hover,
+  .socials a:hover,
+  .row img:hover,
+  button:hover,
+  .button-link:hover,
+  .video-card:hover img {
+    transform: none;
   }
 }

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-27T20:48:51Z",
+  "title": "Design System: Adam Szilagyi Video Production Portfolio",
+  "source": {
+    "mode": "scan",
+    "primaryFile": "styles.css",
+    "notes": "Extracted from the existing static CSS. styles.css was not modified."
+  },
+  "extensions": {
+    "colorMeta": {
+      "page-ink": {
+        "role": "neutral",
+        "displayName": "Page Ink",
+        "canonical": "#0f0f0f",
+        "source": "body background"
+      },
+      "header-ink": {
+        "role": "neutral",
+        "displayName": "Header Ink",
+        "canonical": "#1a1a1a",
+        "source": "header background"
+      },
+      "rule-ink": {
+        "role": "neutral",
+        "displayName": "Rule Ink",
+        "canonical": "#222222",
+        "source": "section borders, skill tracks, button gradient"
+      },
+      "button-graphite": {
+        "role": "primary",
+        "displayName": "Button Graphite",
+        "canonical": "#444444",
+        "source": "button gradient start"
+      },
+      "button-hover-graphite": {
+        "role": "primary",
+        "displayName": "Button Hover Graphite",
+        "canonical": "#666666",
+        "source": "button hover gradient start"
+      },
+      "skill-fill": {
+        "role": "primary",
+        "displayName": "Skill Fill Graphite",
+        "canonical": "#555555",
+        "source": "skill bar fill"
+      },
+      "text-white": {
+        "role": "neutral",
+        "displayName": "Text White",
+        "canonical": "#ffffff",
+        "source": "raw white declarations"
+      },
+      "text-body": {
+        "role": "neutral",
+        "displayName": "Text Body",
+        "canonical": "#cfcfcf",
+        "source": "about and row descriptions"
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "canonical": "#aaaaaa",
+        "source": "footer and page descriptions"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "source": ".page-title",
+        "purpose": "Category page titles."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "source": ".about h2",
+        "purpose": "Major section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "source": ".desc h3",
+        "purpose": "Portfolio category row headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "source": "body, .about p, .desc p, .video-text",
+        "purpose": "Narrative copy and project descriptions."
+      },
+      "label": {
+        "displayName": "Label",
+        "source": ".tag, footer",
+        "purpose": "Metadata, tags, and utility text."
+      }
+    },
+    "elevation": {
+      "navHover": "0 6px 20px rgba(0, 0, 0, 0.4)",
+      "portrait": "0 10px 30px rgba(0, 0, 0, 0.5)",
+      "certificate": "drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4))",
+      "portfolioPreview": "0 10px 30px rgba(0, 0, 0, 0.6)",
+      "buttonHover": "0 8px 25px rgba(0, 0, 0, 0.4)",
+      "videoThumbnail": "0 6px 20px rgba(0, 0, 0, 0.4)"
+    },
+    "motion": {
+      "titleHover": {
+        "properties": ["opacity", "transform"],
+        "duration": "0.2s",
+        "easing": "ease",
+        "effect": "scale(1.05), opacity 0.8"
+      },
+      "navHover": {
+        "properties": ["all"],
+        "duration": "0.25s",
+        "easing": "ease",
+        "effect": "translateY(-2px)"
+      },
+      "buttonHover": {
+        "properties": ["all"],
+        "duration": "0.25s",
+        "easing": "ease",
+        "effect": "translateY(-2px)"
+      },
+      "thumbnailHover": {
+        "properties": ["transform"],
+        "duration": "0.3s",
+        "easing": "ease",
+        "effects": {
+          "portfolioRow": "scale(1.03)",
+          "videoCard": "scale(1.08)"
+        }
+      },
+      "fadeIn": {
+        "properties": ["opacity", "transform"],
+        "duration": "0.8s",
+        "easing": "ease",
+        "from": "opacity: 0; transform: translateY(20px)",
+        "to": "opacity: 1; transform: translateY(0)"
+      },
+      "reducedMotionGuidance": "Add a prefers-reduced-motion media query that disables fade-in movement and hover translations."
+    },
+    "breakpoints": {
+      "mobile": "768px"
+    },
+    "layout": {
+      "maxContentWidth": "1100px",
+      "homeAboutMaxTextWidth": "500px",
+      "contactMaxWidth": "700px",
+      "desktopPortfolioGap": "200px",
+      "videoCardWidth": "280px",
+      "mobileImageMaxWidth": "300px"
+    },
+    "componentSources": {
+      "button": "button, button:hover, button.submit",
+      "navigation": "header, .title, .nav-buttons a",
+      "portfolioRow": ".row, .row img, .desc",
+      "videoRow": ".video-row, .video-card, .video-title, .video-text",
+      "tag": ".tag, .tag:hover",
+      "input": "input, textarea, input:focus, textarea:focus",
+      "skills": ".skills, .skill, .bar, .bar-fill"
+    },
+    "rules": [
+      "Lead with the work.",
+      "Keep the story attached to the artifact.",
+      "Make skill visible without turning the site into a scorecard.",
+      "Build confidence through clarity.",
+      "Let the portfolio feel human."
+    ],
+    "antiReferences": [
+      "generic dark portfolio templates",
+      "overproduced agency theatrics",
+      "neon creator aesthetics",
+      "heavy glassmorphism",
+      "resume-only pages",
+      "effects that compete with the actual videos"
+    ]
+  }
+}

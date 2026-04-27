@@ -11,30 +11,31 @@
     <!-- HEADER -->
     <header>
       <a href="index.html" class="title">Adam Szilagyi - Portfolio</a>
-      <div class="nav-buttons">
+      <nav class="nav-buttons" aria-label="Primary navigation">
         <a href="informational.html">Informational</a>
         <a href="freeform.html">Freeform</a>
         <a href="news.html">News Package</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-      </div>
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
     </header>
 
-    <!-- PAGE TITLE -->
-    <div class="page-title">News Packages</div>
-    <div class="page-desc">
-      News-style video packages and broadcast-style reporting.
-    </div>
+    <main id="main-content">
+      <!-- PAGE TITLE -->
+      <h1 class="page-title">News Packages</h1>
+      <p class="page-desc">
+        News-style video packages and broadcast-style reporting.
+      </p>
 
-    <!-- VIDEO 1 -->
-    <section class="video-row">
-      <a class="video-card" href="https://youtu.be/MkvD6lzPgV0" target="_blank">
+      <!-- VIDEO 1 -->
+      <section class="video-row">
+      <a class="video-card" href="https://youtu.be/MkvD6lzPgV0" target="_blank" rel="noopener noreferrer">
         <div class="video-title">CHS Spring Musical Package</div>
-        <img src="images/news1.jpg" alt="Video 1 thumbnail" />
+        <img src="images/thumbs/news1.jpg" alt="CHS Spring Musical Package video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
-        <div class="video-text">Every year the Creekside High School's theatre department hosts the Spring Muscial for 
+        <div class="video-text">Every year, Creekside High School's theatre department hosts the Spring Musical for
           our community to enjoy. In this package we interviewed several students and the director for more information on 
-          the Muscial and what happens behind the scenes. Additionally we told students about important dates and how to purchase 
+          the musical and what happens behind the scenes. Additionally, we told students about important dates and how to purchase
           tickets for the showing.</div>
         <div class="video-tags">
           <span class="tag">Premiere Pro</span>
@@ -47,13 +48,13 @@
 
     <!-- VIDEO 2 -->
     <section class="video-row">
-      <a class="video-card" href="https://youtu.be/QZOHqDC52lU" target="_blank">
+      <a class="video-card" href="https://youtu.be/QZOHqDC52lU" target="_blank" rel="noopener noreferrer">
         <div class="video-title">Hispanic Honors Society Basket Fundraiser</div>
-        <img src="images/news2.jpg" alt="Video 2 thumbnail" />
+        <img src="images/thumbs/news2.jpg" alt="Hispanic Honors Society Basket Fundraiser video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
         <div class="video-text">The Hispanic Honors Society hosted a fundraiser for their senior members. It was a raffle for 
-          several custom gift baskets, each with unique suprises. We informed students about how to enter the raffle, what each basket 
+          several custom gift baskets, each with unique surprises. We informed students about how to enter the raffle, what each basket
           contained, and what deadlines they should look out for.</div>
         <div class="video-tags">
           <span class="tag">Premiere Pro</span>
@@ -65,13 +66,13 @@
 
     <!-- VIDEO 3 -->
     <section class="video-row">
-      <a class="video-card" href="https://youtu.be/VFp15CEeelA" target="_blank">
+      <a class="video-card" href="https://youtu.be/VFp15CEeelA" target="_blank" rel="noopener noreferrer">
         <div class="video-title">CHS Academy News Package</div>
-        <img src="images/news3.jpg" alt="Video 3 thumbnail" />
+        <img src="images/thumbs/news3.jpg" alt="CHS Academy News Package video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
-        <div class="video-text">This News Package was to inform rising Freshmen and Sophmores about the Career Academy Programs at 
-          Creekside High School. We demostrated how to register for an Academy along with a brief overview of each Academy and some opportunites.
+        <div class="video-text">This news package informed rising freshmen and sophomores about the Career Academy programs at
+          Creekside High School. We demonstrated how to register for an academy, along with a brief overview of each academy and some opportunities.
           Academies at Creekside are a great chance to get professional certifications and actual career experience.</div>
         <div class="video-tags">
           <span class="tag">Premiere Pro</span>
@@ -81,23 +82,27 @@
     </section>
 
     <!-- CONTACT FORM -->
-    <section class="contact">
-      <h2>Contact Me</h2>
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
       <form action="https://formspree.io/f/mwvaejre" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Message..." rows="5"></textarea>
+        <label for="contact-name">Your Name</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" required />
+        <label for="contact-email">Your Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" required />
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5"></textarea>
         <button class="submit" type="submit">Send</button>
       </form>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
       <div>Adam Szilagyi - Portfolio</div>
       <div>
-        <a href="https://www.youtube.com/">YT</a> |
-        <a href="https://www.instagram.com">IG</a> |
-        <a href="https://www.linkedin.com/">LI</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YT</a> |
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">IG</a> |
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LI</a>
       </div>
     </footer>
   </body>

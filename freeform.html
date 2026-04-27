@@ -11,30 +11,31 @@
     <!-- HEADER -->
     <header>
       <a href="index.html" class="title">Adam Szilagyi - Portfolio</a>
-      <div class="nav-buttons">
+      <nav class="nav-buttons" aria-label="Primary navigation">
         <a href="informational.html">Informational</a>
         <a href="freeform.html">Freeform</a>
         <a href="news.html">News Package</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-      </div>
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
     </header>
 
-    <!-- PAGE TITLE -->
-    <div class="page-title">Freeform</div>
-    <div class="page-desc">
-      Creative, experimental, and style-driven video work.
-    </div>
+    <main id="main-content">
+      <!-- PAGE TITLE -->
+      <h1 class="page-title">Freeform</h1>
+      <p class="page-desc">
+        Creative, experimental, and style-driven video work.
+      </p>
 
-    <!-- VIDEO 1 -->
-    <section class="video-row">
-      <a class="video-card" href="https://youtu.be/-RjYOG3RNKY" target="_blank">
+      <!-- VIDEO 1 -->
+      <section class="video-row">
+      <a class="video-card" href="https://youtu.be/-RjYOG3RNKY" target="_blank" rel="noopener noreferrer">
         <div class="video-title">Christmas Traditions Package</div>
-        <img src="images/free1.jpg" alt="Video 1 thumbnail" />
+        <img src="images/thumbs/free1.jpg" alt="Christmas Traditions Package video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
-        <div class="video-text">This Package was explains the history and some popular traditions of Christmas. We interviewed 
-          several students and staff about their favorite Christmas movies and songs. This video worked to better inform the student 
-          body about the history of Christmas and some local views about the holiday their favorite traditions.</div>
+        <div class="video-text">This package explains the history and popular traditions of Christmas. We interviewed
+          several students and staff about their favorite Christmas movies and songs. The video helped inform the student
+          body about Christmas history and local views on favorite holiday traditions.</div>
         <div class="video-tags">
           <span class="tag">Premiere Pro</span>
           <span class="tag">Audio</span>
@@ -45,15 +46,15 @@
 
     <!-- VIDEO 2 -->
     <section class="video-row">
-      <a class="video-card" href="https://youtu.be/7KwPspmigpY" target="_blank">
+      <a class="video-card" href="https://youtu.be/7KwPspmigpY" target="_blank" rel="noopener noreferrer">
         <div class="video-title">Earth Day Package</div>
-        <img src="images/free2.jpg" alt="Video 2 thumbnail" />
+        <img src="images/thumbs/free2.jpg" alt="Earth Day Package video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
-        <div class="video-text">This Freeform Package was created to better inform the student body about Earth Day and the 
+        <div class="video-text">This freeform package was created to better inform the student body about Earth Day and the
           history of Earth Day. We discussed how Earth Day grew into an international holiday with hundreds of thousands of participants. 
-          Additionally we showed several ways for people to contribute to their local communities and help our planet, learn more on 
-          the <a href="https://www.earthday.org/"><b>Earth Day Webpage.</b></a>.</div>
+          Additionally, we showed several ways for people to contribute to their local communities and help our planet. Learn more on
+          the <a href="https://www.earthday.org/"><b>Earth Day webpage</b></a>.</div>
         <div class="video-tags">
           <span class="tag">Premiere Pro</span>
           <span class="tag">Audio</span>
@@ -63,14 +64,14 @@
 
     <!-- VIDEO 3 -->
     <section class="video-row">
-      <a class="video-card" href="https://youtu.be/8H7IEGr7EFw" target="_blank">
+      <a class="video-card" href="https://youtu.be/8H7IEGr7EFw" target="_blank" rel="noopener noreferrer">
         <div class="video-title">Thanksgiving Traditions Package</div>
-        <img src="images/free3.jpg" alt="Video 3 thumbnail" />
+        <img src="images/thumbs/free3.jpg" alt="Thanksgiving Traditions Package video thumbnail" width="720" height="405" loading="lazy" decoding="async" />
       </a>
       <div>
-        <div class="video-text">This Video explains the history and some popular traditions of Thanksgiving. We interviewed 
+        <div class="video-text">This video explains the history and popular traditions of Thanksgiving. We interviewed
           several students and staff about their favorite Thanksgiving foods, sports, and traditions. This video worked to better inform the student 
-          body about the history of Thanksgiving and some local views about the holiday their favorite traditions.</div>
+          body about Thanksgiving history and local views on favorite holiday traditions.</div>
         <div class="video-tags">
           <span class="tag">Premiere Pro</span>
           <span class="tag">Audio</span>
@@ -80,23 +81,27 @@
     </section>
 
     <!-- CONTACT FORM -->
-    <section class="contact">
-      <h2>Contact Me</h2>
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
       <form action="https://formspree.io/f/mwvaejre" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Message..." rows="5"></textarea>
+        <label for="contact-name">Your Name</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" required />
+        <label for="contact-email">Your Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" required />
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5"></textarea>
         <button class="submit" type="submit">Send</button>
       </form>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
       <div>Adam Szilagyi - Portfolio</div>
       <div>
-        <a href="https://www.youtube.com/">YT</a> |
-        <a href="https://www.instagram.com">IG</a> |
-        <a href="https://www.linkedin.com/">LI</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YT</a> |
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">IG</a> |
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LI</a>
       </div>
     </footer>
   </body>
