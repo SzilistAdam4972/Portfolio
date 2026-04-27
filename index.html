@@ -94,6 +94,8 @@
         <img
           id="img1"
           src="images/thumbs/info1.jpg"
+          srcset="images/thumbs/small/info1.jpg 360w, images/thumbs/info1.jpg 720w"
+          sizes="(max-width: 768px) min(100vw - 40px, 300px), 340px"
           alt="Preview image for informational video projects"
           width="720"
           height="405"
@@ -113,6 +115,8 @@
         <img
           id="img2"
           src="images/thumbs/free1.jpg"
+          srcset="images/thumbs/small/free1.jpg 360w, images/thumbs/free1.jpg 720w"
+          sizes="(max-width: 768px) min(100vw - 40px, 300px), 340px"
           alt="Preview image for freeform video projects"
           width="720"
           height="405"
@@ -132,6 +136,8 @@
         <img
           id="img3"
           src="images/thumbs/news1.jpg"
+          srcset="images/thumbs/small/news1.jpg 360w, images/thumbs/news1.jpg 720w"
+          sizes="(max-width: 768px) min(100vw - 40px, 300px), 340px"
           alt="Preview image for news package video projects"
           width="720"
           height="405"
@@ -175,39 +181,49 @@
 
     <!-- SLIDESHOW SCRIPT -->
     <script>
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
       const infoImgs = [
-        "images/thumbs/info1.jpg",
-        "images/thumbs/info2.jpg",
-        "images/thumbs/info3.jpg",
-        "images/thumbs/info4.jpg",
+        ["images/thumbs/info1.jpg", "images/thumbs/small/info1.jpg 360w, images/thumbs/info1.jpg 720w"],
+        ["images/thumbs/info2.jpg", "images/thumbs/small/info2.jpg 360w, images/thumbs/info2.jpg 720w"],
+        ["images/thumbs/info3.jpg", "images/thumbs/small/info3.jpg 360w, images/thumbs/info3.jpg 720w"],
+        ["images/thumbs/info4.jpg", "images/thumbs/small/info4.jpg 360w, images/thumbs/info4.jpg 720w"],
       ];
 
       const freeImgs = [
-        "images/thumbs/free1.jpg",
-        "images/thumbs/free2.jpg",
-        "images/thumbs/free3.jpg",
+        ["images/thumbs/free1.jpg", "images/thumbs/small/free1.jpg 360w, images/thumbs/free1.jpg 720w"],
+        ["images/thumbs/free2.jpg", "images/thumbs/small/free2.jpg 360w, images/thumbs/free2.jpg 720w"],
+        ["images/thumbs/free3.jpg", "images/thumbs/small/free3.jpg 360w, images/thumbs/free3.jpg 720w"],
       ];
 
       const newsImgs = [
-        "images/thumbs/news1.jpg",
-        "images/thumbs/news2.jpg",
-        "images/thumbs/news3.jpg",
+        ["images/thumbs/news1.jpg", "images/thumbs/small/news1.jpg 360w, images/thumbs/news1.jpg 720w"],
+        ["images/thumbs/news2.jpg", "images/thumbs/small/news2.jpg 360w, images/thumbs/news2.jpg 720w"],
+        ["images/thumbs/news3.jpg", "images/thumbs/small/news3.jpg 360w, images/thumbs/news3.jpg 720w"],
       ];
 
       let i1 = 0,
         i2 = 0,
         i3 = 0;
 
-      setInterval(() => {
-        i1 = (i1 + 1) % infoImgs.length;
-        document.getElementById("img1").src = infoImgs[i1];
+      const swapPreview = (id, pair) => {
+        const image = document.getElementById(id);
+        image.src = pair[0];
+        image.srcset = pair[1];
+      };
 
-        i2 = (i2 + 1) % freeImgs.length;
-        document.getElementById("img2").src = freeImgs[i2];
+      if (!reduceMotion) {
+        setInterval(() => {
+          i1 = (i1 + 1) % infoImgs.length;
+          swapPreview("img1", infoImgs[i1]);
 
-        i3 = (i3 + 1) % newsImgs.length;
-        document.getElementById("img3").src = newsImgs[i3];
-      }, 2500);
+          i2 = (i2 + 1) % freeImgs.length;
+          swapPreview("img2", freeImgs[i2]);
+
+          i3 = (i3 + 1) % newsImgs.length;
+          swapPreview("img3", newsImgs[i3]);
+        }, 2500);
+      }
     </script>
 
     <script>
