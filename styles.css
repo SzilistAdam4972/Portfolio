@@ -232,6 +232,7 @@ header {
   height: 200px;
   object-fit: cover;
   border-radius: var(--radius-xl);
+  border: 1px solid var(--border-medium);
   box-shadow: var(--shadow-media);
   transition: transform 0.3s var(--ease-out);
   flex-shrink: 0;
@@ -458,6 +459,7 @@ footer a:hover {
   height: 160px;
   object-fit: cover;
   border-radius: var(--radius-lg);
+  border: 1px solid var(--border-medium);
   box-shadow: var(--shadow-card);
   transition: transform 0.3s var(--ease-out);
 }
